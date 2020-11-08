@@ -31,17 +31,7 @@ if (isset($_POST['reg_user'])) {
 	}
 
 
-	$user_check_query =$db->query("SELECT * FROM apprenant");
-	$result = $user_check_query->fetchAll();
 	
-
-	// Checking user in database
-		if ($result['email'] === $email) {
-			array_push($errors, "Email déja existe");
-		}
-
-
-	echo "Total error: " . count($errors);
 
 	// Insert New Data
 	if (count($errors) == 0) {
@@ -56,7 +46,7 @@ if (isset($_POST['reg_user'])) {
 		if($stmt->execute())
              {
 
-				header('location: index.php');
+				header('location: connecté.php');
 
              }
 	}

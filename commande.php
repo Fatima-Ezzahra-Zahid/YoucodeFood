@@ -103,7 +103,7 @@ if(isset($_POST['enregestrer']))
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- End All Title Box -->
 
     <!-- Start Contact Us  -->

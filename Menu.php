@@ -46,8 +46,18 @@ $produit4 = $selectT->fetchAll();
                         <li class="nav-item "><a class="nav-link" href="index.php">Accueil</a></li>
                         <li class="nav-item active"><a class="nav-link" href="Menu.php">Nos menus</a></li>
                         <li class="nav-item"><a class="nav-link" href="Commande.php">Commande</a></li>
+                        <?php if (isset($_SESSION['email'])) {
+
+                        ?>
+                        <li class="nav-item"><a class="nav-link"><?php echo $_SESSION['email']; ?></a></li>
+                        <li class="nav-item"><a class="nav-link" href="logout.php">Déconnexion</a></li>
+                        <?php } else {
+
+                        ?> 
+
                         <li class="nav-item"><a class="nav-link" href="connecté.php">Connexion</a></li>
                         <li class="nav-item"><a class="nav-link" href="register.php">Inscription</a></li>
+                     <?php } ?>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
